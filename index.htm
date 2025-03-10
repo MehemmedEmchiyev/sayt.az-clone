@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+        <link rel="stylesheet" href="output.css">
+        <link rel="stylesheet" href="input.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    </head>
+    <body>
+        <header class="fixed w-full z-20  bg-white">
+            <nav class=" px-6 py-7 flex items-center justify-between">
+                <div class="w-30 h-10">
+                    <img src="https://sayt.az/icons/saytaz.svg" class="w-full h-full" alt="">
+                </div>
+                <div>
+                    <ul class="hidden lg:flex items-center gap-4 xl:gap-7 2xl:gap-15">
+                        <li class="flex items-center gap-1.5 font-medium cursor-pointer hover:text-root-color">Veb sayt <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true" class="w-5 h-5 group-hover:text-mainLightPurpleHover"><path fill-rule="evenodd" d="M5.23 7.21a.75.75 0 011.06.02L10 11.168l3.71-3.938a.75.75 0 111.08 1.04l-4.25 4.5a.75.75 0 01-1.08 0l-4.25-4.5a.75.75 0 01.02-1.06z" clip-rule="evenodd"></path></svg></li>
+                        <li class="flex items-center gap-1.5 font-medium cursor-pointer hover:text-root-color">Domen <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true" class="w-5 h-5 group-hover:text-mainLightPurpleHover"><path fill-rule="evenodd" d="M5.23 7.21a.75.75 0 011.06.02L10 11.168l3.71-3.938a.75.75 0 111.08 1.04l-4.25 4.5a.75.75 0 01-1.08 0l-4.25-4.5a.75.75 0 01.02-1.06z" clip-rule="evenodd"></path></svg></li>
+                        <li class="flex items-center gap-1.5 font-medium cursor-pointer hover:text-root-color">Hostinq <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true" class="w-5 h-5 group-hover:text-mainLightPurpleHover"><path fill-rule="evenodd" d="M5.23 7.21a.75.75 0 011.06.02L10 11.168l3.71-3.938a.75.75 0 111.08 1.04l-4.25 4.5a.75.75 0 01-1.08 0l-4.25-4.5a.75.75 0 01.02-1.06z" clip-rule="evenodd"></path></svg></li>
+                        <li class="flex items-center gap-1.5 font-medium cursor-pointer hover:text-root-color">Xidmətlər <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true" class="w-5 h-5 group-hover:text-mainLightPurpleHover"><path fill-rule="evenodd" d="M5.23 7.21a.75.75 0 011.06.02L10 11.168l3.71-3.938a.75.75 0 111.08 1.04l-4.25 4.5a.75.75 0 01-1.08 0l-4.25-4.5a.75.75 0 01.02-1.06z" clip-rule="evenodd"></path></svg></li>
+                        <li class="flex items-center gap-1.5 font-medium cursor-pointer hover:text-root-color">Şirkət <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true" class="w-5 h-5 group-hover:text-mainLightPurpleHover"><path fill-rule="evenodd" d="M5.23 7.21a.75.75 0 011.06.02L10 11.168l3.71-3.938a.75.75 0 111.08 1.04l-4.25 4.5a.75.75 0 01-1.08 0l-4.25-4.5a.75.75 0 01.02-1.06z" clip-rule="evenodd"></path></svg></li>
+                    </ul>
+                </div>
+                <div class="flex items-center justify-between gap-7">
+                    <div class="flex items-center"> 
+                        <select class="outline-0 border-0 p-3 text-2xl">
+                            <option value="">₼</option>
+                            <option value="">$</option>
+                        </select>
+                        <select class="outline-0 border-0 p-3 text-xl">
+                            <option value="">az</option>
+                            <option value="">en</option>
+                        </select>
+                    </div>
+                    <div class="hidden xl:flex items-center gap-3">
+                        <button class="px-6 py-[0.56rem] rounded-[8px] bgLinear text-white font-bold">Qiymət Təklifi Al</button>
+                        <button class="px-6 py-[0.56rem] rounded-[8px] border-1 border-root-color bg-transparent text-root-color font-bold">Daxil Ol</button>
+                    </div>
+
+
+                    <div  class="block xl:hidden">
+                        <i id="openBar" class="fa-solid fa-bars cursor-pointer"></i>
+                        <div id="bar" class="hidden w-[70%] h-full fixed top-0 right-0 border-l-1 border-root-color bg-white p-5">
+                            <div class="w-full text-end py-3">
+                                <i id="closeBar" class="fa-solid fa-x"></i>
+                            </div>
+                            <div class="flex items-center"> 
+                                <select class="outline-0 border-0 p-3 text-2xl">
+                                    <option value="">₼</option>
+                                    <option value="">$</option>
+                                </select>
+                                <select class="outline-0 border-0 p-3 text-xl">
+                                    <option value="">az</option>
+                                    <option value="">en</option>
+                                </select>
+                            </div>
+                            <div class="flex flex-col items-center gap-3">
+                                <button class="w-full px-6 py-[0.56rem] rounded-[8px] bgLinear text-white font-bold">Qiymət Təklifi Al</button>
+                                <button class="w-full px-6 py-[0.56rem] rounded-[8px] border-1 border-root-color bg-transparent text-root-color font-bold">Daxil Ol</button>
+                            </div>
+                            <ul class="py-3 flex lg:hidden flex-col items-start gap-4 xl:gap-7 2xl:gap-15">
+                                <li class="flex items-center gap-1.5 font-medium cursor-pointer hover:text-root-color">Veb sayt <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true" class="w-5 h-5 group-hover:text-mainLightPurpleHover"><path fill-rule="evenodd" d="M5.23 7.21a.75.75 0 011.06.02L10 11.168l3.71-3.938a.75.75 0 111.08 1.04l-4.25 4.5a.75.75 0 01-1.08 0l-4.25-4.5a.75.75 0 01.02-1.06z" clip-rule="evenodd"></path></svg></li>
+                                <li class="flex items-center gap-1.5 font-medium cursor-pointer hover:text-root-color">Domen <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true" class="w-5 h-5 group-hover:text-mainLightPurpleHover"><path fill-rule="evenodd" d="M5.23 7.21a.75.75 0 011.06.02L10 11.168l3.71-3.938a.75.75 0 111.08 1.04l-4.25 4.5a.75.75 0 01-1.08 0l-4.25-4.5a.75.75 0 01.02-1.06z" clip-rule="evenodd"></path></svg></li>
+                                <li class="flex items-center gap-1.5 font-medium cursor-pointer hover:text-root-color">Hostinq <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true" class="w-5 h-5 group-hover:text-mainLightPurpleHover"><path fill-rule="evenodd" d="M5.23 7.21a.75.75 0 011.06.02L10 11.168l3.71-3.938a.75.75 0 111.08 1.04l-4.25 4.5a.75.75 0 01-1.08 0l-4.25-4.5a.75.75 0 01.02-1.06z" clip-rule="evenodd"></path></svg></li>
+                                <li class="flex items-center gap-1.5 font-medium cursor-pointer hover:text-root-color">Xidmətlər <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true" class="w-5 h-5 group-hover:text-mainLightPurpleHover"><path fill-rule="evenodd" d="M5.23 7.21a.75.75 0 011.06.02L10 11.168l3.71-3.938a.75.75 0 111.08 1.04l-4.25 4.5a.75.75 0 01-1.08 0l-4.25-4.5a.75.75 0 01.02-1.06z" clip-rule="evenodd"></path></svg></li>
+                                <li class="flex items-center gap-1.5 font-medium cursor-pointer hover:text-root-color">Şirkət <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true" class="w-5 h-5 group-hover:text-mainLightPurpleHover"><path fill-rule="evenodd" d="M5.23 7.21a.75.75 0 011.06.02L10 11.168l3.71-3.938a.75.75 0 111.08 1.04l-4.25 4.5a.75.75 0 01-1.08 0l-4.25-4.5a.75.75 0 01.02-1.06z" clip-rule="evenodd"></path></svg></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </nav>
+        </header>
+        <main class=" pt-[120px]">
+            <div class="w-full lg:w-[80%] flex flex-col lg:flex-row items-start p-2.5 gap-5 bg-[#F5F5F5] mx-auto">
+                <div class="bg-white w-full lg:w-[65%]  p-3">
+                    <h1 class="mt-4 mb-12 text-3xl md:text-5xl font-bold">Qiymət Təklifi Al</h1>
+                    <div id="staticPage" class="">
+                        <h2 class="text-[#212529] text-lg font-medium pb-2.5">Statik səhifələr</h2>
+                        <div class="p-4 bg-[#F5F5F7] rounded-t-[7px]">
+                            <p class="mb-4">Neçə statik səhifə olacaq?</p>
+                            <div  class="flex items-center gap-4 lg:gap-8 pb-5">
+                                <div class="bg-root-color text-white flex xmd:w-9 w-7 xmd:h-9 h-7 xmd:text-base text-sm items-center justify-center rounded-md">1</div>
+                                <div class="w-full"> <input min="1" max="20" step="1" value="2" type="range" class="w-full"> </div>
+                                <div class="bg-root-color text-white flex xmd:w-9 w-7 xmd:h-9 h-7 xmd:text-base text-sm items-center justify-center rounded-md">20</div>
+                            </div>
+                            <div class="flex flex-col lg:flex-row items-start lg:items-center w-full py-5">
+                                <div class="w-[30%]"><p class="whitespace-nowrap">Dizayn mürəkkəblik :</p></div>
+                                <div class="w-full lg:w-[70%]">
+                                    <div class="w-full py-3 flex items-center justify-between">
+                                        <span>Sadə</span>
+                                        <span>Orta</span>
+                                        <span>Xüsusi</span>
+                                    </div>
+                                    <input min="1" max="3" step="1" value="1" type="range" class="!w-full"/>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="w-full bg-[#DEE7F1] flex items-center justify-between px-3 py-5 rounded-b-[7px]">
+                            <span class="text-root-color text-xl font-medium">Xərc:</span>
+                            <span class="text-root-color text-xl font-medium">4 səhifə / ₼ 400</span>
+                        </div>
+                    </div>
+
+                    <div  class="pt-8 ">
+                        <h2 class="text-[#212529] text-lg pb-2.5 font-medium">Veb sayt əlavələri</h2>
+                        <div class="p-4 bg-[#F5F5F7] rounded-t-[7px]">
+                            <div id="otherPage" class="w-full grid grid-cols-1 lg:grid-cols-2 gap-3">
+                                <!-- <div class="w-full flex items-center justify-between">
+                                    <span class="font-medium">Bloq</span>
+                                    <div onclick="changePlace(this)" class="w-15 h-8 duration-500 rounded-2xl bg-[#E5E7EB] p-1" >
+                                        <div class="h-full w-6 rounded-full duration-500 bg-white"></div>
+                                    </div>
+                                </div> -->
+                                <!-- <div class="w-full flex items-center justify-between">
+                                    <span class="font-medium">Bloq</span>
+                                    <div class="w-15 h-8 rounded-2xl bg-[#E5E7EB] p-1" >
+                                        <div class="h-full w-6 rounded-full bg-white"></div>
+                                    </div>
+                                </div> -->
+                            </div>
+                        </div>
+                        <div class="w-full bg-[#DEE7F1] flex items-center justify-between px-3 py-5 rounded-b-[7px]">
+                            <span class="text-root-color text-xl font-medium">Xərc:</span>
+                            <span class="text-root-color text-xl font-medium">₼ 0</span>
+                        </div>
+                    </div>
+
+                    <div class="pt-8 ">
+                        <h2 class="text-[#212529] text-lg pb-2.5 font-medium">Axtarış motorunun optimallaşdırılması</h2>
+                        <div class="p-4 bg-[#F5F5F7] rounded-t-[7px]">
+                            <div id="seo" class="w-full grid grid-cols-1 lg:grid-cols-2 gap-3">
+                                <!-- <div class="flex items-center gap-3"><input type="checkbox"/> <span class="mt-px text-gray-700 cursor-pointer select-none">Başlıqlar &  Meta</span></div>
+                                <div class="flex items-center gap-3"><input type="checkbox"/> <span class="mt-px text-gray-700 cursor-pointer select-none">Açar söz</span></div>
+                                <div class="flex items-center gap-3"><input type="checkbox"/> <span class="mt-px text-gray-700 cursor-pointer select-none">+20 Qabaqcıl Texnika</span></div>
+                                <div class="flex items-center gap-3"><input type="checkbox"/> <span class="mt-px text-gray-700 cursor-pointer select-none">Başlıq Teqləri</span></div>
+                                <div class="flex items-center gap-3"><input type="checkbox"/> <span class="mt-px text-gray-700 cursor-pointer select-none">Sitemap</span></div> -->
+                            </div>
+                        </div>
+                        <div class="w-full bg-[#DEE7F1] flex items-center justify-between px-3 py-5 rounded-b-[7px]">
+                            <span class="text-root-color text-xl font-medium">Xərc:</span>
+                            <span class="text-root-color text-xl font-medium">₼ 0</span>
+                        </div>
+                    </div>
+
+                    <div  class="pt-8 ">
+                        <h2 class="text-[#212529] text-lg pb-2.5 font-medium">Elektron ticarət əlavələri</h2>
+                        <div class="p-4 bg-[#F5F5F7] rounded-t-[7px]">
+                            <div id="ecommerce" class="w-full grid grid-cols-1 lg:grid-cols-2 gap-3">
+                                <!-- <div class="w-full flex items-center justify-between">
+                                    <span class="font-medium">Bloq</span>
+                                    <div onclick="changePlace(this)" class="w-15 h-8 duration-500 rounded-2xl bg-[#E5E7EB] p-1" >
+                                        <div class="h-full w-6 rounded-full duration-500 bg-white"></div>
+                                    </div>
+                                </div> -->
+                                <!-- <div class="w-full flex items-center justify-between">
+                                    <span class="font-medium">Bloq</span>
+                                    <div class="w-15 h-8 rounded-2xl bg-[#E5E7EB] p-1" >
+                                        <div class="h-full w-6 rounded-full bg-white"></div>
+                                    </div>
+                                </div> -->
+                            </div>
+                        </div>
+                        <div class="w-full bg-[#DEE7F1] flex items-center justify-between px-3 py-5 rounded-b-[7px]">
+                            <span class="text-root-color text-xl font-medium">Xərc:</span>
+                            <span class="text-root-color text-xl font-medium">₼ 0</span>
+                        </div>
+                    </div>
+                    
+                    <div id="logoDesign" class="pt-8 ">
+                        <h2 class="text-[#212529] text-lg pb-2.5 font-medium">Logo dizaynı</h2>
+                        <div class="p-4 bg-[#F5F5F7] rounded-t-[7px]">
+                            <div class="w-full ">
+                                <div class="w-full">
+                                    <div class="w-full py-3 flex items-center justify-between">
+                                        <span>Ehtiyac yoxdur</span>
+                                        <span>Sadə</span>
+                                        <span>Xüsusi</span>
+                                    </div>
+                                    <input min="1" max="3" step="1" value="1" type="range" class="!w-full"/>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="w-full bg-[#DEE7F1] flex items-center justify-between px-3 py-5 rounded-b-[7px]">
+                            <span class="text-root-color text-xl font-medium">Cost:</span>
+                            <span class="text-root-color text-xl font-medium">₼ 0</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="bg-white w-full lg:w-[35%] ">
+                    <div class="p-5">
+                        <h2 class="pb-6">Təklifiniz</h2>
+                    
+                    <div class="border-b-1 border-[#E9EAEE]">
+                        <div class="flex items-center justify-between pb-5">
+                            <span class="text-[#8B8B9A]">Statik səhifələr :</span>
+                            <span  class="text-root-color font-bold text-xl">₼ 100</span>
+                        </div>
+                        <div class="flex items-center justify-between pb-5">
+                            <span class="text-[#8B8B9A]">Əlavələr :</span>
+                            <span  class="text-root-color font-bold text-xl">₼ 100</span>
+                        </div>
+                        <div class="flex items-center justify-between pb-5">
+                            <span class="text-[#8B8B9A]">SEO  :</span>
+                            <span  class="text-root-color font-bold text-xl">₼ 100</span>
+                        </div>
+                        <div class="flex items-center justify-between pb-5">
+                            <span class="text-[#8B8B9A]">E-ticarət :</span>
+                            <span  class="text-root-color font-bold text-xl">₼ 100</span>
+                        </div>
+                        <div class="flex items-center justify-between pb-5">
+                            <span class="text-[#8B8B9A]">Logo dizaynı :</span>
+                            <span  class="text-root-color font-bold text-xl">₼ 100</span>
+                        </div>
+                    </div>
+                    <div class="py-3 flex items-center justify-between">
+                        <span class="font-bold text-[#8B8B9A]">Qeyd :</span>
+                        <span class="text-[#90909E]">Minimum sayt qiyməti <span class="text-root-color">₼ 450</span></span>
+                    </div>
+                    </div>
+                    <div class="w-full py-6 text-2xl font-bold text-center bg-root-color text-white" >
+                        <p>Ümumi təxmini dəyəri: ₼ <span>450</span></p>
+                    </div>
+                    
+                </div>
+            </div>
+        </main>
+        
+        <script src="data.js"></script>
+        <script src="script.js"></script>
+    </body>
+</html>

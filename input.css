@@ -1,0 +1,37 @@
+@import "tailwindcss";
+@theme {--color-root-color : #924DE2;}
+.bgLinear {background-image: linear-gradient(90deg, #7028e4, #e5b2ca);}
+i,button,li{cursor: pointer;}
+input[type="range"]{-webkit-appearance: none;}
+input[type="range"]::-webkit-slider-runnable-track{
+    background-color: #dedfe0 !important;
+    height: 7px;
+    border-radius: 8px;
+}
+input[type="range"]::-webkit-slider-thumb{
+    -webkit-appearance: none;
+    appearance: none;
+    background-color: #924DE2 !important;
+    height: 16px;
+    width: 16px;
+    border-radius: 50%;
+    padding: 5px;
+    margin-top: -5px; 
+}
+input[type="checkbox"]{
+    -webkit-appearance: none;
+    appearance: none;
+    width: 20px;
+    height: 20px;
+    border: 1px solid #818791;
+    border-radius: 6px;
+}   
+input[type="checkbox"]:checked{background-color: #7028e4;}
+input[type="checkbox"]:checked::before{
+    content: "🗸";
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 14px;
+    color: white !important;
+}
