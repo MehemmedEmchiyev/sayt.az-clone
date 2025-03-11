@@ -82,7 +82,7 @@
                             <p class="mb-4">Neçə statik səhifə olacaq?</p>
                             <div  class="flex items-center gap-4 lg:gap-8 pb-5">
                                 <div class="bg-root-color text-white flex xmd:w-9 w-7 xmd:h-9 h-7 xmd:text-base text-sm items-center justify-center rounded-md">1</div>
-                                <div class="w-full"> <input min="1" max="20" step="1" value="2" type="range" class="w-full"> </div>
+                                <div class="w-full"> <input id="pageCountInput" min="1" max="20" step="1" value="4" type="range" class="w-full"> </div>
                                 <div class="bg-root-color text-white flex xmd:w-9 w-7 xmd:h-9 h-7 xmd:text-base text-sm items-center justify-center rounded-md">20</div>
                             </div>
                             <div class="flex flex-col lg:flex-row items-start lg:items-center w-full py-5">
@@ -93,13 +93,13 @@
                                         <span>Orta</span>
                                         <span>Xüsusi</span>
                                     </div>
-                                    <input min="1" max="3" step="1" value="1" type="range" class="!w-full"/>
+                                    <input id="pageCriter" min="1" max="3" step="1" value="1" type="range" class="!w-full"/>
                                 </div>
                             </div>
                         </div>
                         <div class="w-full bg-[#DEE7F1] flex items-center justify-between px-3 py-5 rounded-b-[7px]">
                             <span class="text-root-color text-xl font-medium">Xərc:</span>
-                            <span class="text-root-color text-xl font-medium">4 səhifə / ₼ 400</span>
+                            <span id="pageCount" class="text-root-color text-xl font-medium"></span>
                         </div>
                     </div>
 
@@ -107,23 +107,12 @@
                         <h2 class="text-[#212529] text-lg pb-2.5 font-medium">Veb sayt əlavələri</h2>
                         <div class="p-4 bg-[#F5F5F7] rounded-t-[7px]">
                             <div id="otherPage" class="w-full grid grid-cols-1 lg:grid-cols-2 gap-3">
-                                <!-- <div class="w-full flex items-center justify-between">
-                                    <span class="font-medium">Bloq</span>
-                                    <div onclick="changePlace(this)" class="w-15 h-8 duration-500 rounded-2xl bg-[#E5E7EB] p-1" >
-                                        <div class="h-full w-6 rounded-full duration-500 bg-white"></div>
-                                    </div>
-                                </div> -->
-                                <!-- <div class="w-full flex items-center justify-between">
-                                    <span class="font-medium">Bloq</span>
-                                    <div class="w-15 h-8 rounded-2xl bg-[#E5E7EB] p-1" >
-                                        <div class="h-full w-6 rounded-full bg-white"></div>
-                                    </div>
-                                </div> -->
+                                
                             </div>
                         </div>
                         <div class="w-full bg-[#DEE7F1] flex items-center justify-between px-3 py-5 rounded-b-[7px]">
                             <span class="text-root-color text-xl font-medium">Xərc:</span>
-                            <span class="text-root-color text-xl font-medium">₼ 0</span>
+                            <span id="wsoTag" class="text-root-color text-xl font-medium">₼ 0</span>
                         </div>
                     </div>
 
@@ -131,16 +120,12 @@
                         <h2 class="text-[#212529] text-lg pb-2.5 font-medium">Axtarış motorunun optimallaşdırılması</h2>
                         <div class="p-4 bg-[#F5F5F7] rounded-t-[7px]">
                             <div id="seo" class="w-full grid grid-cols-1 lg:grid-cols-2 gap-3">
-                                <!-- <div class="flex items-center gap-3"><input type="checkbox"/> <span class="mt-px text-gray-700 cursor-pointer select-none">Başlıqlar &  Meta</span></div>
-                                <div class="flex items-center gap-3"><input type="checkbox"/> <span class="mt-px text-gray-700 cursor-pointer select-none">Açar söz</span></div>
-                                <div class="flex items-center gap-3"><input type="checkbox"/> <span class="mt-px text-gray-700 cursor-pointer select-none">+20 Qabaqcıl Texnika</span></div>
-                                <div class="flex items-center gap-3"><input type="checkbox"/> <span class="mt-px text-gray-700 cursor-pointer select-none">Başlıq Teqləri</span></div>
-                                <div class="flex items-center gap-3"><input type="checkbox"/> <span class="mt-px text-gray-700 cursor-pointer select-none">Sitemap</span></div> -->
+                                
                             </div>
                         </div>
                         <div class="w-full bg-[#DEE7F1] flex items-center justify-between px-3 py-5 rounded-b-[7px]">
                             <span class="text-root-color text-xl font-medium">Xərc:</span>
-                            <span class="text-root-color text-xl font-medium">₼ 0</span>
+                            <span id="seoSalary" class="text-root-color text-xl font-medium">₼ 0</span>
                         </div>
                     </div>
 
@@ -148,23 +133,12 @@
                         <h2 class="text-[#212529] text-lg pb-2.5 font-medium">Elektron ticarət əlavələri</h2>
                         <div class="p-4 bg-[#F5F5F7] rounded-t-[7px]">
                             <div id="ecommerce" class="w-full grid grid-cols-1 lg:grid-cols-2 gap-3">
-                                <!-- <div class="w-full flex items-center justify-between">
-                                    <span class="font-medium">Bloq</span>
-                                    <div onclick="changePlace(this)" class="w-15 h-8 duration-500 rounded-2xl bg-[#E5E7EB] p-1" >
-                                        <div class="h-full w-6 rounded-full duration-500 bg-white"></div>
-                                    </div>
-                                </div> -->
-                                <!-- <div class="w-full flex items-center justify-between">
-                                    <span class="font-medium">Bloq</span>
-                                    <div class="w-15 h-8 rounded-2xl bg-[#E5E7EB] p-1" >
-                                        <div class="h-full w-6 rounded-full bg-white"></div>
-                                    </div>
-                                </div> -->
+                                
                             </div>
                         </div>
                         <div class="w-full bg-[#DEE7F1] flex items-center justify-between px-3 py-5 rounded-b-[7px]">
                             <span class="text-root-color text-xl font-medium">Xərc:</span>
-                            <span class="text-root-color text-xl font-medium">₼ 0</span>
+                            <span id="ecoTag" class="text-root-color text-xl font-medium">₼ 0</span>
                         </div>
                     </div>
                     
@@ -178,40 +152,41 @@
                                         <span>Sadə</span>
                                         <span>Xüsusi</span>
                                     </div>
-                                    <input min="1" max="3" step="1" value="1" type="range" class="!w-full"/>
+                                    <input id="logoRange" min="0" max="2" step="1" value="0" type="range" class="!w-full"/>
                                 </div>
                             </div>
                         </div>
                         <div class="w-full bg-[#DEE7F1] flex items-center justify-between px-3 py-5 rounded-b-[7px]">
                             <span class="text-root-color text-xl font-medium">Cost:</span>
-                            <span class="text-root-color text-xl font-medium">₼ 0</span>
+                            <span id="logoCost" class="text-root-color text-xl font-medium">₼ 0</span>
                         </div>
                     </div>
                 </div>
-                <div class="bg-white w-full lg:w-[35%] ">
+                
+
+                <div id="offer" class="sticky top-0 bg-white w-full lg:w-[35%] ">
                     <div class="p-5">
                         <h2 class="pb-6">Təklifiniz</h2>
-                    
                     <div class="border-b-1 border-[#E9EAEE]">
                         <div class="flex items-center justify-between pb-5">
                             <span class="text-[#8B8B9A]">Statik səhifələr :</span>
-                            <span  class="text-root-color font-bold text-xl">₼ 100</span>
+                            <span id="staticPageTotal"  class="text-root-color font-bold text-xl">₼ 400</span>
                         </div>
                         <div class="flex items-center justify-between pb-5">
                             <span class="text-[#8B8B9A]">Əlavələr :</span>
-                            <span  class="text-root-color font-bold text-xl">₼ 100</span>
+                            <span id="totalOther" class="text-root-color font-bold text-xl">₼ 0</span>
                         </div>
                         <div class="flex items-center justify-between pb-5">
                             <span class="text-[#8B8B9A]">SEO  :</span>
-                            <span  class="text-root-color font-bold text-xl">₼ 100</span>
+                            <span id = "totalSeo" class="text-root-color font-bold text-xl">₼ 0</span>
                         </div>
                         <div class="flex items-center justify-between pb-5">
                             <span class="text-[#8B8B9A]">E-ticarət :</span>
-                            <span  class="text-root-color font-bold text-xl">₼ 100</span>
+                            <span id="ecommerceTotal" class="text-root-color font-bold text-xl">₼ 0</span>
                         </div>
                         <div class="flex items-center justify-between pb-5">
                             <span class="text-[#8B8B9A]">Logo dizaynı :</span>
-                            <span  class="text-root-color font-bold text-xl">₼ 100</span>
+                            <span id="totalLogo" class="text-root-color font-bold text-xl">₼ 0</span>
                         </div>
                     </div>
                     <div class="py-3 flex items-center justify-between">
@@ -220,7 +195,7 @@
                     </div>
                     </div>
                     <div class="w-full py-6 text-2xl font-bold text-center bg-root-color text-white" >
-                        <p>Ümumi təxmini dəyəri: ₼ <span>450</span></p>
+                        <p>Ümumi təxmini dəyəri:  <span id="totalGlobal">450</span></p>
                     </div>
                     
                 </div>
